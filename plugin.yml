@@ -1,0 +1,19 @@
+main: com.jacksonjude.OpenTime.OpenTimePlugin
+name: OpenTime
+version: 1.0
+author: JJCooley
+description: Set a period of time for a server to be opened / closed to players. Can be bypassed with permission
+commands:
+   opentime:
+      description: Reload OpenTime config
+      usage: /opentime < reload >
+      aliases: [ot]
+      permission: opentime.admin
+      permission-message: You cannot reload OpenTime config
+permissions:
+   opentime.admin:
+      description: Reload OpenTime config
+      default: op
+   opentime.bypass:
+      description: Bypass OpenTime
+      default: op
