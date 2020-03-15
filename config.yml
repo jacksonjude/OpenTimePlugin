@@ -12,7 +12,7 @@ time-ranges:
          week: "*"
          # What days of the month are included (1 - 31)
          day: "*"
-         # What weekdays are included (0 - 6, starting Sunday)
+         # What weekdays are included (1 - 7, starting Sunday)
          weekday: "*"
          # What hours are included (0 - 23)
          hour: "*"

@@ -6,7 +6,7 @@ description: Set a period of time for a server to be opened / closed to players.
 commands:
    opentime:
       description: Reload OpenTime config
-      usage: /opentime < reload >
+      usage: /opentime < reload | test >
       aliases: [ot]
       permission: opentime.admin
       permission-message: You cannot reload OpenTime config
