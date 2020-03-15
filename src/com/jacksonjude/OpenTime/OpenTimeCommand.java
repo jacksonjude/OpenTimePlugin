@@ -1,5 +1,7 @@
 package com.jacksonjude.OpenTime;
 
+import java.util.Date;
+
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -17,7 +19,7 @@ public class OpenTimeCommand implements CommandExecutor
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
-		if (!sender.hasPermission(OpenTimePlugin.ADMIN_PERMISSION))
+		if (!sender.hasPermission(Constants.ADMIN_PERMISSION))
 		{
 			sender.sendMessage(ChatColor.RED + "You cannot edit DisableCraft config");
 			return true;
@@ -25,7 +27,7 @@ public class OpenTimeCommand implements CommandExecutor
 		
 		if (args.length == 0)
 		{
-			sender.sendMessage(ChatColor.GOLD + "/opentime reload" + ChatColor.GRAY + " - reloads configuration");
+			sender.sendMessage(ChatColor.GOLD + "/opentime reload" + ChatColor.GRAY + " - reloads configuration" + "\n" + ChatColor.GOLD + "/opentime test <time>" + ChatColor.GRAY + " - tests time");
 			return true;
 		}
 		
@@ -35,6 +37,13 @@ public class OpenTimeCommand implements CommandExecutor
 			plugin.reloadConfig();
 			plugin.loadTimeConfig();
 			sender.sendMessage(ChatColor.GREEN + "OpenTime config reloaded");
+			
+			return true;
+		case "test":
+			long timeToTest = (new Date()).getTime();
+			if (args.length >= 2) timeToTest = Long.parseLong(args[1]);
+			
+			sender.sendMessage(String.valueOf(plugin.shouldKickFromServer(timeToTest)));
 			
 			return true;
 		}

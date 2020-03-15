@@ -1,20 +1,22 @@
-# If specified time periods refer to server open or server close
-on-selected-range: open
-# Time periods: Use range (ex. '0-5'), list (ex. '0,1,2,3,4,5'), both (ex. '0-2,4-8'), or use * to select all
-time:
-   # What years included
-   year: "*"
-   # What months included (0 - 11)
-   month: "*"
-   # What weeks of the year included (1 - 52)
-   week: "*"
-   # What days of the month are included (1 - 31)
-   day: "*"
-   # What weekdays are included (0 - 6, starting Sunday)
-   weekday: "*"
-   # What hours are included (0 - 23)
-   hour: "*"
-   # What minutes are included (0 - 59)
-   minute: "*"
-# Time zone (see https://github.com/nfergu/Java-Time-Zone-List)
-timezone: Europe/London
+time-ranges:
+   default:
+      # If specified time periods refer to server open (open), server close (close), or no action (none)
+      on-selected-range: open
+      # Time periods: Use range (ex. '0-5'), list (ex. '0,1,2,3,4,5'), both (ex. '0-2,4-8'), or use * to select all
+      time:
+         # What years included
+         year: "*"
+         # What months included (0 - 11)
+         month: "*"
+         # What weeks of the year included (1 - 52)
+         week: "*"
+         # What days of the month are included (1 - 31)
+         day: "*"
+         # What weekdays are included (0 - 6, starting Sunday)
+         weekday: "*"
+         # What hours are included (0 - 23)
+         hour: "*"
+         # What minutes are included (0 - 59)
+         minute: "*"
+      # Time zone (see https://github.com/nfergu/Java-Time-Zone-List)
+      timezone: Europe/London
