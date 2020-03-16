@@ -16,7 +16,7 @@ public class OpenTimeCompleter implements TabCompleter
 		switch (args.length)
 		{
 		case 1:
-			List<String> subcommands = new ArrayList<String>(Arrays.asList("reload", "time"));
+			List<String> subcommands = new ArrayList<String>(Arrays.asList("reload", "test"));
 			return subcommands;
 		}
 		
