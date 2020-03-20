@@ -21,7 +21,7 @@ public class OpenTimeCommand implements CommandExecutor
 	{
 		if (!sender.hasPermission(Constants.ADMIN_PERMISSION))
 		{
-			sender.sendMessage(ChatColor.RED + "You cannot edit DisableCraft config");
+			sender.sendMessage(ChatColor.RED + "You cannot edit OpenTime config");
 			return true;
 		}
 		
