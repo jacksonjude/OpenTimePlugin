@@ -1,7 +1,7 @@
 main: com.jacksonjude.OpenTime.OpenTimePlugin
 name: OpenTime
 version: 1.0
-api-version: 1.15
+api-version: 1.16
 author: JJCooley
 description: Set a period of time for a server to be opened / closed to players. Can be bypassed with permission
 commands:
